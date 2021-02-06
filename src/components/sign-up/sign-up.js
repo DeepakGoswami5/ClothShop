@@ -25,9 +25,9 @@ class SignUp extends Component {
         const { displayName, email, password,confirmPassword} = this.state;
 
         if(password !== confirmPassword){
-            alert("passwords dont match")
+            alert("passwords dont match");
+            return; 
         }
-
         try{
             const { user } = await auth.createUserWithEmailAndPassword(
                 email,
@@ -63,32 +63,28 @@ class SignUp extends Component {
                         value={displayName}
                         onChange={this.handleChange}
                         label='Display Name'
-                        required>
-                    </FormInput>
+                        required />
                     <FormInput 
                         type='email'
                         name='email'
                         value={email}
                         onChange={this.handleChange}
                         label='Email'
-                        required>
-                    </FormInput>
+                        required />
                     <FormInput 
                         type='password'
                         name='password'
                         value={password}
                         onChange={this.handleChange}
                         label='Password'
-                        required>
-                    </FormInput>
+                        required/>
                     <FormInput 
                         type='password'
-                        name='confirmpassword'
+                        name='confirmPassword'
                         value={confirmPassword}
                         onChange={this.handleChange}
                         label='Confirm Password'
-                        required>
-                    </FormInput>
+                        required/>
                     <CustomButton type='submit'>SIGN UP</CustomButton>
                 </form>
             </div>

@@ -5,8 +5,8 @@ import SignUp from '../../components/sign-up/sign-up'
 
 const SignInUp = () => (
     <div className='sign-in-up'>
-        <SignIn></SignIn>
-        <SignUp></SignUp>
+        <SignIn/>
+        <SignUp/>
     </div>
 )
 
